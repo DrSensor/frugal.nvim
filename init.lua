@@ -2,6 +2,8 @@
 -- https://github.com/nanotee/nvim-lua-guide
 -----------------------------------------------------------
 
+require('plugins')
+
 -----------------------------------------------------------
 -- Neovim API aliases
 -----------------------------------------------------------
@@ -19,3 +21,13 @@ g.mapleader = ','             -- change leader to a comma
 opt.mouse = 'a'               -- enable mouse support
 opt.clipboard = 'unnamedplus' -- copy/paste to system clipboard
 opt.swapfile = false          -- don't use swapfile
+
+-----------------------------------------------------------
+-- Startup
+-----------------------------------------------------------
+cmd [[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+  augroup end
+]]
