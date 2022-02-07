@@ -38,6 +38,10 @@ return require('packer').startup(function(use)
   }
 
   use {
+    'romgrk/nvim-treesitter-context', after = 'nvim-treesitter',
+  }
+
+  use {
     'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true },
   }
 
