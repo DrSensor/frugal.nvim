@@ -6,6 +6,7 @@ vim.g.loaded_perl_provider = 0
 require("lazy").setup({
   spec = {
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    { import = "ui" },
   },
   defaults = {
     lazy = false,
