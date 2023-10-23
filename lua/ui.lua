@@ -13,6 +13,7 @@ return {
   },
   {
     "noice.nvim",
+    enabled = not vim.g.vscode,
     opts = {
       lsp = {
         progress = {
