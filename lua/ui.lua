@@ -9,7 +9,46 @@ return {
           floats = "transparent",
         }
       end
+      opts.lualine_bold = true
+      opts.hide_inactive_statusline = true
     end,
+  },
+  {
+    "lualine.nvim",
+    enabled = not vim.g.vscode,
+    opts = {
+      options = {
+        component_separators = "",
+        section_separators = "",
+        theme = {
+          replace = {
+            a = { fg = "lightgray", bg = "green" },
+            b = { fg = "lightgreen", bg = "transparent" },
+          },
+          visual = {
+            a = { fg = "black", bg = "orange" },
+            b = { fg = "orange", bg = "transparent", gui = "italic" },
+          },
+          command = {
+            a = { fg = "lightgreen", bg = "transparent" },
+          },
+          insert = {
+            a = { fg = "black", bg = "lightyellow", gui = "italic" },
+            b = { fg = "gray", bg = "transparent" },
+            c = { fg = "orange", bg = "transparent", gui = "italic" },
+          },
+          normal = {
+            a = { fg = "black", bg = "lightgreen" },
+            b = { fg = "orange", bg = "transparent" },
+            c = { bg = "transparent", gui = "italic" },
+          },
+        },
+      },
+      sections = {
+        lualine_b = vim.g.neovide and { "branch" } or {},
+        lualine_z = {},
+      },
+    },
   },
   {
     "noice.nvim",
