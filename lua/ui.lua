@@ -45,7 +45,6 @@ return {
         },
       },
       sections = {
-        lualine_b = vim.g.neovide and { "branch" } or {},
         lualine_z = {},
       },
     },
